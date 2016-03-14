@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		CCBA78911C970857000E5EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78901C970857000E5EFB /* main.m */; };
 		CCBA78941C970857000E5EFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78931C970857000E5EFB /* AppDelegate.m */; };
-		CCBA78971C970857000E5EFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78961C970857000E5EFB /* ViewController.m */; };
-		CCBA789A1C970857000E5EFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBA78981C970857000E5EFB /* Main.storyboard */; };
 		CCBA789C1C970857000E5EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBA789B1C970857000E5EFB /* Assets.xcassets */; };
-		CCBA789F1C970857000E5EFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBA789D1C970857000E5EFB /* LaunchScreen.storyboard */; };
 		CCBA78AA1C970857000E5EFB /* MyYuWeiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78A91C970857000E5EFB /* MyYuWeiTests.m */; };
 		CCBA78B51C970857000E5EFB /* MyYuWeiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78B41C970857000E5EFB /* MyYuWeiUITests.m */; };
+		CCBA78C91C9710B9000E5EFB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +37,7 @@
 		CCBA78901C970857000E5EFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBA78921C970857000E5EFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCBA78931C970857000E5EFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCBA78951C970857000E5EFB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CCBA78961C970857000E5EFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CCBA78991C970857000E5EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCBA789B1C970857000E5EFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CCBA789E1C970857000E5EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCBA78A01C970857000E5EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBA78A51C970857000E5EFB /* MyYuWeiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyYuWeiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBA78A91C970857000E5EFB /* MyYuWeiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyYuWeiTests.m; sourceTree = "<group>"; };
@@ -51,6 +45,8 @@
 		CCBA78B01C970857000E5EFB /* MyYuWeiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyYuWeiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBA78B41C970857000E5EFB /* MyYuWeiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyYuWeiUITests.m; sourceTree = "<group>"; };
 		CCBA78B61C970857000E5EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCBA78C71C9710B9000E5EFB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +97,10 @@
 		CCBA788E1C970857000E5EFB /* MyYuWei */ = {
 			isa = PBXGroup;
 			children = (
+				CCBA789B1C970857000E5EFB /* Assets.xcassets */,
 				CCBA78921C970857000E5EFB /* AppDelegate.h */,
 				CCBA78931C970857000E5EFB /* AppDelegate.m */,
-				CCBA78951C970857000E5EFB /* ViewController.h */,
-				CCBA78961C970857000E5EFB /* ViewController.m */,
-				CCBA78981C970857000E5EFB /* Main.storyboard */,
-				CCBA789B1C970857000E5EFB /* Assets.xcassets */,
-				CCBA789D1C970857000E5EFB /* LaunchScreen.storyboard */,
+				CCBA78C21C970FD9000E5EFB /* Home */,
 				CCBA78A01C970857000E5EFB /* Info.plist */,
 				CCBA788F1C970857000E5EFB /* Supporting Files */,
 			);
@@ -138,6 +131,23 @@
 				CCBA78B61C970857000E5EFB /* Info.plist */,
 			);
 			path = MyYuWeiUITests;
+			sourceTree = "<group>";
+		};
+		CCBA78C21C970FD9000E5EFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78C71C9710B9000E5EFB /* MainTabBarController.h */,
+				CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */,
+				CCBA78C31C970FE3000E5EFB /* Base */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CCBA78C31C970FE3000E5EFB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCBA789F1C970857000E5EFB /* LaunchScreen.storyboard in Resources */,
 				CCBA789C1C970857000E5EFB /* Assets.xcassets in Resources */,
-				CCBA789A1C970857000E5EFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCBA78971C970857000E5EFB /* ViewController.m in Sources */,
 				CCBA78941C970857000E5EFB /* AppDelegate.m in Sources */,
 				CCBA78911C970857000E5EFB /* main.m in Sources */,
+				CCBA78C91C9710B9000E5EFB /* MainTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,25 +317,6 @@
 			targetProxy = CCBA78B11C970857000E5EFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CCBA78981C970857000E5EFB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCBA78991C970857000E5EFB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CCBA789D1C970857000E5EFB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCBA789E1C970857000E5EFB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CCBA78B71C970857000E5EFB /* Debug */ = {
@@ -416,8 +405,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyYuWei/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dengsiqin.com.MyYuWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,8 +419,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyYuWei/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dengsiqin.com.MyYuWei;
 				PRODUCT_NAME = "$(TARGET_NAME)";

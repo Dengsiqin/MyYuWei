@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainTabBarController.h
 //  MyYuWei
 //
 //  Created by 邓思琴 on 16/3/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainTabBarController : UITabBarController
 
 @end
-
