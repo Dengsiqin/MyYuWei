@@ -13,6 +13,11 @@
 		CCBA78AA1C970857000E5EFB /* MyYuWeiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78A91C970857000E5EFB /* MyYuWeiTests.m */; };
 		CCBA78B51C970857000E5EFB /* MyYuWeiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78B41C970857000E5EFB /* MyYuWeiUITests.m */; };
 		CCBA78C91C9710B9000E5EFB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */; };
+		CCBA78E81C97D410000E5EFB /* CommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78E71C97D410000E5EFB /* CommendViewController.m */; };
+		CCBA78EB1C97D428000E5EFB /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78EA1C97D428000E5EFB /* CityViewController.m */; };
+		CCBA78EE1C97D442000E5EFB /* OneTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78ED1C97D442000E5EFB /* OneTimeViewController.m */; };
+		CCBA78F11C97D45C000E5EFB /* DailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78F01C97D45C000E5EFB /* DailyViewController.m */; };
+		CCBA78F41C97D473000E5EFB /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78F31C97D473000E5EFB /* MineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,16 @@
 		CCBA78B61C970857000E5EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBA78C71C9710B9000E5EFB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		CCBA78E61C97D410000E5EFB /* CommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommendViewController.h; sourceTree = "<group>"; };
+		CCBA78E71C97D410000E5EFB /* CommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommendViewController.m; sourceTree = "<group>"; };
+		CCBA78E91C97D428000E5EFB /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		CCBA78EA1C97D428000E5EFB /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		CCBA78EC1C97D442000E5EFB /* OneTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTimeViewController.h; sourceTree = "<group>"; };
+		CCBA78ED1C97D442000E5EFB /* OneTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTimeViewController.m; sourceTree = "<group>"; };
+		CCBA78EF1C97D45C000E5EFB /* DailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyViewController.h; sourceTree = "<group>"; };
+		CCBA78F01C97D45C000E5EFB /* DailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyViewController.m; sourceTree = "<group>"; };
+		CCBA78F21C97D473000E5EFB /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		CCBA78F31C97D473000E5EFB /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +154,11 @@
 				CCBA78C71C9710B9000E5EFB /* MainTabBarController.h */,
 				CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */,
 				CCBA78C31C970FE3000E5EFB /* Base */,
+				CCBA78D61C97D21A000E5EFB /* Commend(推荐) */,
+				CCBA78D21C97D21A000E5EFB /* City(城市) */,
+				CCBA78E21C97D22F000E5EFB /* OneTime(一刻) */,
+				CCBA78DA1C97D21A000E5EFB /* Daily(食记) */,
+				CCBA78DE1C97D22F000E5EFB /* Mine(我的) */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,6 +168,176 @@
 			children = (
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		CCBA78D21C97D21A000E5EFB /* City(城市) */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78D31C97D21A000E5EFB /* Controller */,
+				CCBA78D41C97D21A000E5EFB /* Model */,
+				CCBA78D51C97D21A000E5EFB /* View */,
+			);
+			name = "City(城市)";
+			path = City;
+			sourceTree = "<group>";
+		};
+		CCBA78D31C97D21A000E5EFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78E91C97D428000E5EFB /* CityViewController.h */,
+				CCBA78EA1C97D428000E5EFB /* CityViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCBA78D41C97D21A000E5EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCBA78D51C97D21A000E5EFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCBA78D61C97D21A000E5EFB /* Commend(推荐) */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78D71C97D21A000E5EFB /* Controller */,
+				CCBA78D81C97D21A000E5EFB /* Model */,
+				CCBA78D91C97D21A000E5EFB /* View */,
+			);
+			name = "Commend(推荐)";
+			path = Commend;
+			sourceTree = "<group>";
+		};
+		CCBA78D71C97D21A000E5EFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78E61C97D410000E5EFB /* CommendViewController.h */,
+				CCBA78E71C97D410000E5EFB /* CommendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCBA78D81C97D21A000E5EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCBA78D91C97D21A000E5EFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCBA78DA1C97D21A000E5EFB /* Daily(食记) */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78DB1C97D21A000E5EFB /* Controller */,
+				CCBA78DC1C97D21A000E5EFB /* Model */,
+				CCBA78DD1C97D21A000E5EFB /* View */,
+			);
+			name = "Daily(食记)";
+			path = Daily;
+			sourceTree = "<group>";
+		};
+		CCBA78DB1C97D21A000E5EFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78EF1C97D45C000E5EFB /* DailyViewController.h */,
+				CCBA78F01C97D45C000E5EFB /* DailyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCBA78DC1C97D21A000E5EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCBA78DD1C97D21A000E5EFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCBA78DE1C97D22F000E5EFB /* Mine(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78DF1C97D22F000E5EFB /* Controller */,
+				CCBA78E01C97D22F000E5EFB /* Model */,
+				CCBA78E11C97D22F000E5EFB /* View */,
+			);
+			name = "Mine(我的)";
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		CCBA78DF1C97D22F000E5EFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78F21C97D473000E5EFB /* MineViewController.h */,
+				CCBA78F31C97D473000E5EFB /* MineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCBA78E01C97D22F000E5EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCBA78E11C97D22F000E5EFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCBA78E21C97D22F000E5EFB /* OneTime(一刻) */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78E31C97D22F000E5EFB /* Controller */,
+				CCBA78E41C97D22F000E5EFB /* Model */,
+				CCBA78E51C97D22F000E5EFB /* View */,
+			);
+			name = "OneTime(一刻)";
+			path = OneTime;
+			sourceTree = "<group>";
+		};
+		CCBA78E31C97D22F000E5EFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCBA78EC1C97D442000E5EFB /* OneTimeViewController.h */,
+				CCBA78ED1C97D442000E5EFB /* OneTimeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCBA78E41C97D22F000E5EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCBA78E51C97D22F000E5EFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +471,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBA78E81C97D410000E5EFB /* CommendViewController.m in Sources */,
 				CCBA78941C970857000E5EFB /* AppDelegate.m in Sources */,
+				CCBA78EB1C97D428000E5EFB /* CityViewController.m in Sources */,
 				CCBA78911C970857000E5EFB /* main.m in Sources */,
+				CCBA78EE1C97D442000E5EFB /* OneTimeViewController.m in Sources */,
 				CCBA78C91C9710B9000E5EFB /* MainTabBarController.m in Sources */,
+				CCBA78F11C97D45C000E5EFB /* DailyViewController.m in Sources */,
+				CCBA78F41C97D473000E5EFB /* MineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
