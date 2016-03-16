@@ -13,6 +13,8 @@
 #import "DailyViewController.h"
 #import "MineViewController.h"
 
+#import "BaseNavigationController.h"
+
 
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeigth [UIScreen mainScreen].bounds.size.heigth
@@ -21,11 +23,12 @@
 
 @interface MainTabBarController (){
     UIImageView * _bjImageView;
+    UIImageView * _selectedImageView;
 }
 
 @end
 
-@implementation MainTabBarController
+@implementation MainTabBarController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +47,7 @@
 
 -(void)_creatViewControllers{
     
+    
     //创建5个视图控制器
     CommendViewController * commend = [[CommendViewController alloc]init];
     CityViewController * city = [[CityViewController alloc]init];
@@ -59,17 +63,26 @@
     //遍历视图控制器，给每一个视图控制器都添加一个导航控制器
     //把导航控制器对象，添加到数组
     
-//    NSMutableArray * navis = [[NSMutableArray alloc]initWithCapacity:viewControllers.count];
-//    for (UIViewController * viewC in viewControllers) {
-//        
-//        
-//        
-//        
-//        
-//        
-//    }
-//    
-//    
+    NSMutableArray * navis = [[NSMutableArray alloc]initWithCapacity:viewControllers.count];
+    for (int i = 0;i < viewControllers.count; i++) {
+        
+        //创建导航控制器
+        UIViewController * viewC = viewControllers[i];
+        
+        BaseNavigationController * navi = [[BaseNavigationController alloc]initWithRootViewController:viewC];
+        
+        navi.delegate = self;
+        [navis addObject:navi];
+        
+        
+        
+        
+    }
+    
+    //把导航控制器的数组交给tabBarController来管理
+    
+    self.viewControllers = navis;
+    
     
     
     
@@ -85,7 +98,7 @@
         [view removeFromSuperview];
     }
     
-    CGFloat width = KScreenWidth / self.viewControllers.count;
+    
     NSArray * titles = @[@"推荐",@"全球",@"一刻",@"食记",@"我的"];
     NSArray * images = @[@"tab_recommend",
                          @"tab_find",
@@ -97,6 +110,7 @@
     _bjImageView.backgroundColor = [UIColor grayColor];
     [self.tabBar addSubview:_bjImageView];
     
+    //创建按钮
     for (int i = 0; i < titles.count; i ++) {
         
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -114,42 +128,50 @@
         label.text = titles[i];
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont systemFontOfSize:12];
-        label.tag = 100;
+        label.tag = 1101;
         [button addSubview:label];
         
         
         
+        //tabBar的点击事件
+        [button addTarget:self action:@selector(clickTabBarButton:) forControlEvents:UIControlEventTouchUpInside];
         
-        
-        
-        
-        
-   
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //设置刚进入时，默认第一个按钮为选中状态
+        if (i == 0) {
+            
+            button.selected = YES;
+            
+            imageView.image = [UIImage imageNamed:@"tab_recommend_orange"];
+            label.textColor = [UIColor orangeColor];
+        }
         
         
     }
                                 
-    
-    
-    
-    
+   
     
     
     
     
 }
 
-
+-(void)clickTabBarButton:(UIButton *)sender{
+    
+    NSArray * imagesOranges = @[@"tab_recommend_orange",
+                               @"tab_find_orange",
+                               @"tab_onetime_orange",
+                               @"tab_daily_orange",
+                               @"tab_mine_orange"];
+    
+    NSArray * images = @[@"tab_recommend",
+                         @"tab_find",
+                         @"tab_onetime",
+                         @"tab_daily",
+                         @"tab_mine"];
+    
+    
+  
+}
 
 
 

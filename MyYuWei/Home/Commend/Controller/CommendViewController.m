@@ -8,7 +8,15 @@
 
 #import "CommendViewController.h"
 
-@interface CommendViewController ()
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+
+
+@interface CommendViewController (){
+    
+    UITableView * _tableView;
+
+    
+}
 
 @end
 
@@ -17,9 +25,123 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self _creatTableView];
+    [self _creatHeaderView];
+    
+}
+
+//创建表视图
+-(void)_creatTableView{
+    
+    _tableView= [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:_tableView];
+    
+    
     
     
 }
+
+//创建表视图的头视图
+
+-(void)_creatHeaderView{
+    
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 275)];
+    headView.backgroundColor = [UIColor purpleColor];
+    
+    //对表视图的头视图进行赋值
+    _tableView.tableHeaderView = headView;
+    
+    
+    
+}
+
+//表视图的数据源方法
+
+//tableView组的个数
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 3;
+    
+}
+
+//tableView每组单元格个数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+//每一个单元格
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString * identifer = @"cell";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+    }
+    
+    if (indexPath.section == 0) {
+        cell.backgroundColor = [UIColor greenColor];
+    }else if(indexPath.section == 1){
+        cell.backgroundColor = [UIColor orangeColor];
+        
+    }else{
+        cell.backgroundColor = [UIColor magentaColor];
+    }
+    
+    
+    
+    
+    return cell;
+}
+
+//返回单元格的高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 0) {
+        return 275;
+    }else if(indexPath.section ==1){
+        return 275;
+    }else{
+        return 100;
+    }
+}
+
+////组的头视图
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//   //自定义组的头视图
+//        UIImageView * imageV = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 2, 5)];
+//        imageV.backgroundColor = [UIColor orangeColor];
+//        
+//        return imageV;
+//   
+//}
+
+
+
+
+
+////返回组的头视图高度
+//
+//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    if (section == 0) {
+//        return 50;
+//    }else if(section == 1){
+//        return 50;
+//    }else{
+//        return 30;
+//    }
+//
+//
+//}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
