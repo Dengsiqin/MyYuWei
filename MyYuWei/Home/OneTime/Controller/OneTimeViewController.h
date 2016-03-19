@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface OneTimeViewController : UIViewController
+#import "BaseViewController.h"
+@interface OneTimeViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

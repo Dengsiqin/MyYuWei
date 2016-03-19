@@ -2,7 +2,7 @@
 //  BaseNavigationController.m
 //  MyYuWei
 //
-//  Created by 邓思琴 on 16/3/16.
+//  Created by 邓思琴 on 16/3/18.
 //  Copyright © 2016年 邓思琴. All rights reserved.
 //
 
@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.navigationBar.barTintColor = UIColorFromRGB(0x1d1d1d);
+//    self.navigationBar.backgroundColor = UIColorFromRGB(0x1d1d1d);//无效
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationBar.titleTextAttributes = @{
+
+                                               NSForegroundColorAttributeName:[UIColor whiteColor]
+                                               };
 }
 
 - (void)didReceiveMemoryWarning {

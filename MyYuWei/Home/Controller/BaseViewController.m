@@ -17,10 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-#warning 创建BaseViewController 将其他控制器继承于base 以便重用相同布局或者功能
-    
+//#warning 创建BaseViewController 将其他控制器继承于base 以便重用相同布局或者功能
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

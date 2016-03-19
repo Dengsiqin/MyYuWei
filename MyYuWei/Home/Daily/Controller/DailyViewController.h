@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DailyViewController : UIViewController
+#import "BaseViewController.h"
+@interface DailyViewController : BaseViewController
 
 @end

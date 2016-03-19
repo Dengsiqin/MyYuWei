@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CityViewController : UIViewController
+#import "BaseViewController.h"
+@interface CityViewController : BaseViewController
 
 @end

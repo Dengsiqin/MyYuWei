@@ -24,12 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
 
     [self _creatTableView];
     [self _creatHeaderView];
     
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    
+    return UIStatusBarStyleLightContent;
+    
+}
 //创建表视图
 -(void)_creatTableView{
     
@@ -83,14 +90,6 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
     }
     
-    if (indexPath.section == 0) {
-        cell.backgroundColor = [UIColor greenColor];
-    }else if(indexPath.section == 1){
-        cell.backgroundColor = [UIColor orangeColor];
-        
-    }else{
-        cell.backgroundColor = [UIColor magentaColor];
-    }
     
     
     
@@ -124,20 +123,21 @@
 
 
 
-////返回组的头视图高度
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    if (section == 0) {
-//        return 50;
-//    }else if(section == 1){
-//        return 50;
-//    }else{
-//        return 30;
-//    }
-//
-//
-//}
+//头视图高度
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 8;
+    
+}
 
+//尾视图高度
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if (section == 3) {
+        return 8;
+    }
+    return 0.00000001;
+    
+}
 
 
 

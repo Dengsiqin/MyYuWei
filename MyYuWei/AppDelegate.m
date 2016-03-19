@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
-
+#define KNOFirstLaunch @"firstLaunch"
+#import "LaunchViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,13 +19,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+
+
     
    //创建一个窗口
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     //设置窗口的颜色
     self.window.backgroundColor = [UIColor whiteColor];
-    //设置window的根视图控制器
-    self.window.rootViewController = [[MainTabBarController alloc]init];
+    
+    if ([userDefaultsGet(KNOFirstLaunch) boolValue] == NO) {
+        //第一次启动
+        
+        
+        self.window.rootViewController = [[LaunchViewController alloc]init];
+        //第一次启动后 设置为yes
+        userDefaultsSet([NSNumber numberWithBool:YES], KNOFirstLaunch);
+//        [KUserDefaults synchronize];//同步存储
+    }else{
+        
+        //设置window的根视图控制器
+        self.window.rootViewController = [[MainTabBarController alloc]init];
+        
+    }
+    
     //设置窗口为主窗口，并让它可见
     [self.window makeKeyAndVisible];
     

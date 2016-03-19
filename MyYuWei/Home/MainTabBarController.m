@@ -35,12 +35,14 @@
    
     
     self.view.backgroundColor = [UIColor grayColor];
-    
+
+
     //创建子控制器
     [self _creatViewControllers];
     
     //自定义标签栏
     [self _creatTabBar];
+    
     
 }
 
@@ -60,28 +62,25 @@
     
     NSArray * viewControllers = @[commend,city,oneTime,daily,mine];
     
-    //遍历视图控制器，给每一个视图控制器都添加一个导航控制器
-    //把导航控制器对象，添加到数组
-    
-    NSMutableArray * navis = [[NSMutableArray alloc]initWithCapacity:viewControllers.count];
-    for (int i = 0;i < viewControllers.count; i++) {
+
+    NSMutableArray * viewctrls = [[NSMutableArray alloc]initWithCapacity:viewControllers.count];
+
+    for (int i = 0; i <viewControllers.count ; i ++) {
         
-        //创建导航控制器
-        UIViewController * viewC = viewControllers[i];
-        
-        BaseNavigationController * navi = [[BaseNavigationController alloc]initWithRootViewController:viewC];
-        
-        navi.delegate = self;
-        [navis addObject:navi];
+       
+        BaseNavigationController * navi = [[BaseNavigationController alloc]initWithRootViewController:viewControllers[i]];
         
         
-        
+        [viewctrls addObject:navi];
         
     }
     
-    //把导航控制器的数组交给tabBarController来管理
+    self.viewControllers = viewctrls;
     
-    self.viewControllers = navis;
+    
+    
+    
+    self.viewControllers = viewctrls;
     
     
     
@@ -107,7 +106,7 @@
                          @"tab_mine"];
     //创建ImageView,设置tabBar的背景图片
     _bjImageView = [[UIImageView alloc]initWithFrame:self.tabBar.bounds];
-    _bjImageView.backgroundColor = [UIColor grayColor];
+    _bjImageView.backgroundColor = [UIColor blackColor];
     [self.tabBar addSubview:_bjImageView];
     
     //创建按钮
@@ -119,7 +118,7 @@
 
         UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 5, KScreenWidth / 5 -40 , KTabBarHeight - 28)];
         
-#warning 设置imageView的内容模式 自适应 防止被拉伸 因为你的imageView尺寸比例与图标大小不符合
+//#warning 设置imageView的内容模式 自适应 防止被拉伸 因为你的imageView尺寸比例与图标大小不符合
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         
         
@@ -136,8 +135,8 @@
         [button addSubview:label];
         
         
-        
-#warning 方案二 不绘制新的imageView和label 直接设置button的图片和文字 然后修改图片和文字的偏移量 默认图片在左边 文字在右边 仅供学习偏移量
+//        
+//#warning 方案二 不绘制新的imageView和label 直接设置button的图片和文字 然后修改图片和文字的偏移量 默认图片在左边 文字在右边 仅供学习偏移量
         /*
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
         [button setTitle:titles[i] forState:UIControlStateNormal];

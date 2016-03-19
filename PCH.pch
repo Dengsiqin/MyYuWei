@@ -1,0 +1,13 @@
+//
+//  PrefixHeader.pch
+//  MyYuWei
+//
+//  Created by 邓思琴 on 16/3/17.
+//  Copyright © 2016年 邓思琴. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "params.h"
+//#import ""
+#endif /* PrefixHeader_pch */

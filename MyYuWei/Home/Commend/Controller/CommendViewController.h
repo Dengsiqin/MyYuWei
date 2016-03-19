@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CommendViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "BaseViewController.h"
+@interface CommendViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 
 @end
