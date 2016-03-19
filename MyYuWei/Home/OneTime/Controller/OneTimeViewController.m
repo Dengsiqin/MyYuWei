@@ -25,12 +25,12 @@
     [super viewDidLoad];
     
 
-   self.title = @"余味";
-//    
-//    UIImageView * titleImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30/proportion_5, 25/proportion_5)];
-//    titleImage.image = [UIImage imageNamed:@"white_logo"];
-//    self.navigationItem.titleView = titleImage;
-//
+//   self.title = @"余味";
+    
+    UIImageView * titleImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30*proportion_5, 25*proportion_5)];
+    titleImage.image = [UIImage imageNamed:@"white_logo"];
+    self.navigationItem.titleView = titleImage;
+
 
     
     [self _creatTableView];

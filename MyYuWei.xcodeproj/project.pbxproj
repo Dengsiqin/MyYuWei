@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CC67936C1C99C72500E438E3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67936B1C99C72500E438E3 /* BaseViewController.m */; };
+		CC8FC9B81C9DC4E500DE0CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8FC9B71C9DC4E400DE0CD6 /* Assets.xcassets */; };
 		CCA6BB281C99987C0045540A /* DailySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA6BB271C99987C0045540A /* DailySelectView.m */; };
 		CCA6BB2B1C99AE700045540A /* DailySelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA6BB2A1C99AE700045540A /* DailySelectModel.m */; };
 		CCBA78911C970857000E5EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78901C970857000E5EFB /* main.m */; };
 		CCBA78941C970857000E5EFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78931C970857000E5EFB /* AppDelegate.m */; };
-		CCBA789C1C970857000E5EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBA789B1C970857000E5EFB /* Assets.xcassets */; };
 		CCBA78AA1C970857000E5EFB /* MyYuWeiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78A91C970857000E5EFB /* MyYuWeiTests.m */; };
 		CCBA78B51C970857000E5EFB /* MyYuWeiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78B41C970857000E5EFB /* MyYuWeiUITests.m */; };
 		CCBA78C91C9710B9000E5EFB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78C81C9710B9000E5EFB /* MainTabBarController.m */; };
@@ -54,6 +54,7 @@
 		CC3F90F31C9AF07A003D8CE9 /* PCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCH.pch; sourceTree = "<group>"; };
 		CC67936A1C99C72500E438E3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CC67936B1C99C72500E438E3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CC8FC9B71C9DC4E400DE0CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCA6BB261C99987C0045540A /* DailySelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySelectView.h; sourceTree = "<group>"; };
 		CCA6BB271C99987C0045540A /* DailySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySelectView.m; sourceTree = "<group>"; };
 		CCA6BB291C99AE700045540A /* DailySelectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySelectModel.h; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		CCBA78901C970857000E5EFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBA78921C970857000E5EFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCBA78931C970857000E5EFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCBA789B1C970857000E5EFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBA78A01C970857000E5EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBA78A51C970857000E5EFB /* MyYuWeiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyYuWeiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBA78A91C970857000E5EFB /* MyYuWeiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyYuWeiTests.m; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		CCBA788E1C970857000E5EFB /* MyYuWei */ = {
 			isa = PBXGroup;
 			children = (
-				CCBA789B1C970857000E5EFB /* Assets.xcassets */,
+				CC8FC9B71C9DC4E400DE0CD6 /* Assets.xcassets */,
 				CCBA78921C970857000E5EFB /* AppDelegate.h */,
 				CCBA78931C970857000E5EFB /* AppDelegate.m */,
 				CCD221411C9BFC47008EC296 /* Launch */,
@@ -559,8 +559,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD221491C9C0F8E008EC296 /* OneTimeCell.xib in Resources */,
+				CC8FC9B81C9DC4E500DE0CD6 /* Assets.xcassets in Resources */,
 				CCF4E39B1C9B0657004A5DF5 /* MineCell.xib in Resources */,
-				CCBA789C1C970857000E5EFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

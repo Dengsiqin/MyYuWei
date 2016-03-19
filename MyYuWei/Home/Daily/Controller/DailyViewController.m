@@ -17,7 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    UIImageView * titleImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30*proportion_5, 25*proportion_5)];
+    titleImage.image = [UIImage imageNamed:@"white_logo"];
+    self.navigationItem.titleView = titleImage;
 
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
