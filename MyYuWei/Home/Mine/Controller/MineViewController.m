@@ -46,7 +46,7 @@
 
 //创建表视图
 -(void)_creatTableView{
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, -20, KScreenWidth, KScreenHeight+20) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, -20, KScreenWidth, KScreenHeight+20) style:UITableViewStylePlain];
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -63,19 +63,19 @@
 //创建表视图的头视图
 -(void)_creatHeadView{
     UIView * haedView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 190*proportion_5)];
-    haedView.backgroundColor = [UIColor yellowColor];
+//    haedView.backgroundColor = [UIColor yellowColor];
     
     
     _tableView.tableHeaderView = haedView;
     
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 140*proportion_5)];
-    imageView.image = [UIImage imageNamed:@"mine_background"];
+    imageView.image = [UIImage imageNamed:@"userCenterBackimage.jpg"];
     [haedView addSubview:imageView];
     
     //头像
     UIImageView * headerView = [[UIImageView alloc]initWithFrame:CGRectMake(25, 60, 60*proportion_5, 60*proportion_5)];
-    headerView.backgroundColor = [UIColor grayColor];
-//    headerView.image = [UIImage imageNamed:@"mine_header"];
+//    headerView.backgroundColor = [UIColor grayColor];
+    headerView.image = [UIImage imageNamed:@"mine_header.jpg"];
     
     headerView.layer.masksToBounds = YES;
     
@@ -87,30 +87,42 @@
     [imageView addSubview:headerView];
     
     //呢称
-    UILabel * nameLabei = [[UILabel alloc]initWithFrame:CGRectMake(100, 70, 60*proportion_5, 15*proportion_5)];
-    nameLabei.backgroundColor = [UIColor clearColor];
-    nameLabei.text = @"念语";
-    nameLabei.textColor = [UIColor whiteColor];
-    nameLabei.font = [UIFont systemFontOfSize:16];
+    UILabel * nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(110, 70, 60*proportion_5, 20*proportion_5)];
+    nameLabel.backgroundColor = [UIColor clearColor];
+    nameLabel.text = @"念语发酵食品";
+    nameLabel.textColor = [UIColor whiteColor];
+    nameLabel.font = [UIFont systemFontOfSize:22];
     
-    [imageView addSubview:nameLabei];
+    [imageView addSubview:nameLabel];
     
     //个性签名
-    UILabel * signLabei = [[UILabel alloc]initWithFrame:CGRectMake(100, 90, 120*proportion_5, 15*proportion_5)];
-    signLabei.backgroundColor = [UIColor clearColor];
-    signLabei.text = @"念语";
-    signLabei.textColor = [UIColor whiteColor];
-    signLabei.font = [UIFont systemFontOfSize:14];
+    UILabel * signLabel = [[UILabel alloc]initWithFrame:CGRectMake(110, 90, 120*proportion_5, 30*proportion_5)];
+    signLabel.backgroundColor = [UIColor clearColor];
+    signLabel.text = @"倘若所有深情都不被辜负";
+    signLabel.textColor = [UIColor whiteColor];
+    signLabel.font = [UIFont systemFontOfSize:18];
     
-    [imageView addSubview:signLabei];
+    [imageView addSubview:signLabel];
     
+    //  性别标签
     
+//    [nameLabel sizeToFit];
+//    nameLabel sizeThatFits:CGSizeMake(<#CGFloat width#>, <#CGFloat height#>)
+    UIImageView * genderImage = [[UIImageView alloc]initWithFrame:CGRectMake(nameLabel.right + 50, 70, 22*proportion_5, 22*proportion_5)];
+    genderImage.image = [UIImage imageNamed:@"mine_girl"];
+    genderImage.contentMode = UIViewContentModeScaleAspectFit;
+    [imageView addSubview:genderImage];
+
+    //右边标签
+
+    UIImageView * rightImage = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth-30, 85, 10*proportion_5, 20*proportion_5)];
+    rightImage.image = [UIImage imageNamed:@"right_arrow_white"];
+    [imageView addSubview:rightImage];
+
     
-    
+
 }
 
-
-//tableView的组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;
 }

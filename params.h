@@ -11,6 +11,9 @@
 #ifndef Header_h
 #define Header_h
 
+#define KTabBarHeight 49
+
+
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define proportion_6 [UIScreen mainScreen].bounds.size.width/375

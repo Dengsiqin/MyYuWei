@@ -8,19 +8,34 @@
 
 #import "CityViewController.h"
 
-@interface CityViewController ()
+@interface CityViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+{
+    UITableView * _cityTableView;
+}
 
 @end
 
 @implementation CityViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    [self _creatTableView];
 
 
 }
+
+//创建表视图
+
+-(void)_creatTableView{
+    _cityTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _cityTableView.backgroundColor = [UIColor clearColor];
+    
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -11,6 +11,9 @@
 		CC8FC9B81C9DC4E500DE0CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8FC9B71C9DC4E400DE0CD6 /* Assets.xcassets */; };
 		CCA6BB281C99987C0045540A /* DailySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA6BB271C99987C0045540A /* DailySelectView.m */; };
 		CCA6BB2B1C99AE700045540A /* DailySelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA6BB2A1C99AE700045540A /* DailySelectModel.m */; };
+		CCAB08891C9E8A2A001064E9 /* DailyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB08871C9E8A2A001064E9 /* DailyCell.m */; };
+		CCAB088A1C9E8A2A001064E9 /* DailyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAB08881C9E8A2A001064E9 /* DailyCell.xib */; };
+		CCAB088D1C9F0282001064E9 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAB088C1C9F0282001064E9 /* UIViewExt.m */; };
 		CCBA78911C970857000E5EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78901C970857000E5EFB /* main.m */; };
 		CCBA78941C970857000E5EFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78931C970857000E5EFB /* AppDelegate.m */; };
 		CCBA78AA1C970857000E5EFB /* MyYuWeiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBA78A91C970857000E5EFB /* MyYuWeiTests.m */; };
@@ -59,6 +62,11 @@
 		CCA6BB271C99987C0045540A /* DailySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySelectView.m; sourceTree = "<group>"; };
 		CCA6BB291C99AE700045540A /* DailySelectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailySelectModel.h; sourceTree = "<group>"; };
 		CCA6BB2A1C99AE700045540A /* DailySelectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailySelectModel.m; sourceTree = "<group>"; };
+		CCAB08861C9E8A2A001064E9 /* DailyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyCell.h; sourceTree = "<group>"; };
+		CCAB08871C9E8A2A001064E9 /* DailyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyCell.m; sourceTree = "<group>"; };
+		CCAB08881C9E8A2A001064E9 /* DailyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyCell.xib; sourceTree = "<group>"; };
+		CCAB088B1C9F0282001064E9 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		CCAB088C1C9F0282001064E9 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		CCBA788C1C970857000E5EFB /* MyYuWei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyYuWei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBA78901C970857000E5EFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBA78921C970857000E5EFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +151,8 @@
 			children = (
 				CC3F90F21C9AF03B003D8CE9 /* params.h */,
 				CC3F90F31C9AF07A003D8CE9 /* PCH.pch */,
+				CCAB088B1C9F0282001064E9 /* UIViewExt.h */,
+				CCAB088C1C9F0282001064E9 /* UIViewExt.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -362,6 +372,9 @@
 		CCBA78DD1C97D21A000E5EFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCAB08861C9E8A2A001064E9 /* DailyCell.h */,
+				CCAB08871C9E8A2A001064E9 /* DailyCell.m */,
+				CCAB08881C9E8A2A001064E9 /* DailyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD221491C9C0F8E008EC296 /* OneTimeCell.xib in Resources */,
+				CCAB088A1C9E8A2A001064E9 /* DailyCell.xib in Resources */,
 				CC8FC9B81C9DC4E500DE0CD6 /* Assets.xcassets in Resources */,
 				CCF4E39B1C9B0657004A5DF5 /* MineCell.xib in Resources */,
 			);
@@ -642,12 +656,14 @@
 				CCBA78EB1C97D428000E5EFB /* CityViewController.m in Sources */,
 				CCBA78911C970857000E5EFB /* main.m in Sources */,
 				CCF4E39A1C9B0657004A5DF5 /* MineCell.m in Sources */,
+				CCAB08891C9E8A2A001064E9 /* DailyCell.m in Sources */,
 				CCBA78EE1C97D442000E5EFB /* OneTimeViewController.m in Sources */,
 				CCBA78C91C9710B9000E5EFB /* MainTabBarController.m in Sources */,
 				CCBA78F11C97D45C000E5EFB /* DailyViewController.m in Sources */,
 				CCD221481C9C0F8E008EC296 /* OneTimeCell.m in Sources */,
 				CCBA78F41C97D473000E5EFB /* MineViewController.m in Sources */,
 				CCD2214C1C9C3915008EC296 /* BaseNavigationController.m in Sources */,
+				CCAB088D1C9F0282001064E9 /* UIViewExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
