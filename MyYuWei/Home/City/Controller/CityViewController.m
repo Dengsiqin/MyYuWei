@@ -20,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIBarButtonItem * leftImage = [[UIBarButtonItem alloc]initWithImage: [UIImage imageNamed:@"white_logo"] style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.leftBarButtonItem =leftImage;
+    
+
     [self _creatTableView];
 
 

@@ -156,6 +156,8 @@ static NSString * identifer = @"cell";
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     }
     
 //    UIImageView * imageView = [UIImageView]

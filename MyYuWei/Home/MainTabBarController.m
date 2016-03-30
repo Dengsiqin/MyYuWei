@@ -36,7 +36,8 @@
     
     self.view.backgroundColor = [UIColor grayColor];
 
-
+    
+    self.tabBar.barTintColor = UIColorFromRGB(0x1d1d1d);
     //创建子控制器
     [self _creatViewControllers];
     
@@ -49,9 +50,21 @@
 
 -(void)_creatViewControllers{
     
+    NSArray * titles = @[@"推荐",@"全球",@"一刻",@"食记",@"我的"];
+    NSArray * images = @[@"tab_recommend",
+                         @"tab_find",
+                         @"tab_onetime",
+                         @"tab_daily",
+                         @"tab_mine"];
+    NSArray * imagesOranges = @[@"tab_recommend_orange",
+                                @"tab_find_orange",
+                                @"tab_onetime_orange",
+                                @"tab_daily_orange",
+                                @"tab_mine_orange"];
     
     //创建5个视图控制器
     CommendViewController * commend = [[CommendViewController alloc]init];
+    
     CityViewController * city = [[CityViewController alloc]init];
     OneTimeViewController * oneTime = [[OneTimeViewController alloc]init];
     DailyViewController * daily = [[DailyViewController alloc]init];
@@ -69,10 +82,18 @@
         
        
         BaseNavigationController * navi = [[BaseNavigationController alloc]initWithRootViewController:viewControllers[i]];
-        
+        navi.tabBarItem = [[UITabBarItem alloc]initWithTitle:titles[i] image:[UIImage imageNamed:images[i]] selectedImage:[UIImage imageNamed:imagesOranges[i]]];
         
         [viewctrls addObject:navi];
         
+//        
+//        self.tabBar.tintColor = [UIColor orangeColor];
+//        
+//        [[UITabBarItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+//        [[UITabBarItem appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateSelected];
+////        [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+//        
+    ;
     }
     
     self.viewControllers = viewctrls;
@@ -82,7 +103,7 @@
     
     self.viewControllers = viewctrls;
     
-    
+    self.tabBar.translucent = NO;
     
     
 }

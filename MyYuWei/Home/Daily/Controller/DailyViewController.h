@@ -11,7 +11,7 @@
 @interface DailyViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 
-@property (nonatomic,strong)UIScrollView * dailyScrollView;
-@property (nonatomic,strong)UITableView * leftTableView;
-@property (nonatomic,strong)UITableView * rightTableView;
+@property (nonatomic,strong)UIScrollView * dailyScrollView;//滑动视图
+@property (nonatomic,strong)UITableView * leftTableView;//左边的tableView
+@property (nonatomic,strong)UITableView * rightTableView;//右边的tableView
 @end

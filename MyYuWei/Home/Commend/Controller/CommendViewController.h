@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-@interface CommendViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
+@interface CommendViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+
+@property(nonatomic,strong)UIScrollView * headScrollView;//头视图上的滑动视图
+
+
 
 @end
